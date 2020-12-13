@@ -5,8 +5,7 @@ ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -39,6 +38,15 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
+
+  #Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.4' # Moved by ZC
+end
+
+# Added by ZC when deploying
+group :product do
+  gem 'pg', '~> 1.2', '>= 1.2.3'
+  #gem 'rails_12factor', '0.0.2'
 end
 
 group :test do
