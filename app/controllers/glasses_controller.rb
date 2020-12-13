@@ -69,6 +69,6 @@ class GlassesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def glass_params
-      params.require(:glass).permit(:name)
+      params.require(:glass).permit(:name, :part_number)
     end
 end

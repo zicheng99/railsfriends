@@ -14,6 +14,7 @@
     <% @glasses.each do |glass| %>
       <tr>
         <td><%= glass.name %></td>
+        <td><%= glass.part_number %></td>
         <td><%= link_to 'Show', glass %></td>
         <td><%= link_to 'Edit', edit_glass_path(glass) %></td>
         <td><%= link_to 'Destroy', glass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
