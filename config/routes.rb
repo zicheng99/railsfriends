@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :glasses
   resources :blogs
   get 'home/index'
   resources :tests
